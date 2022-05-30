@@ -11,7 +11,8 @@ function fig = dispClassPET_multiclass(pd_idx, classes)
         mask_interp = extractLargestComponent3D(mask_interp);
         construction_volume = construction_volume + mask_interp;
     end
-    pt_masked = double(construction_volume) .* pt_scaled;
+    pt_masked = double(construction_volume) .* maximizePETinMask(pt_scaled, mask_interp, 3);
+    % pt_masked = double(construction_volume) .* pt_scaled;
     pt_masked_nan = pt_masked;
     pt_masked_nan(pt_masked_nan == 0) = NaN;
     [pt_hist_counts, pt_hist_edges] = histcounts(pt_masked_nan);
@@ -32,8 +33,8 @@ function fig = dispClassPET_multiclass(pd_idx, classes)
     p1.FaceAlpha = 0.2;
     p2 = patch(fv2,'FaceColor', 'red','EdgeColor','none');
     p2.FaceAlpha = 0.3;
-    p2 = patch(fv3,'FaceColor', 'black','EdgeColor','none');
-    p2.FaceAlpha = 1;
+    p3 = patch(fv3,'FaceColor', 'black','EdgeColor','none');
+    p3.FaceAlpha = 1;
     xticks([]);
     yticks([]);
     zticks([]);
@@ -44,6 +45,4 @@ function fig = dispClassPET_multiclass(pd_idx, classes)
     camlight(-80,-10)
     lighting flat
     title("\fontsize{14}p" + pd_idx(1) + "d" + pd_idx(2));
-
 end
-

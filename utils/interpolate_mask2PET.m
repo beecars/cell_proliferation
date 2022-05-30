@@ -34,7 +34,7 @@ mask_z_end = max(mask_z_locations) + 1;
                         mask_z_start:mask_z_spacing:mask_z_end);        
 
 % DEFINE QUERY GRIDS (interpolation grid)
-% get params for z axis query meshgrid. 
+% get params for z axis query meshgrid.
 pt_z_spacing = pt_info.SliceThickness;
 pt_z_locations = -extractfield(pt_info, 'SliceLocation');
 pt_z_start = min(pt_z_locations);

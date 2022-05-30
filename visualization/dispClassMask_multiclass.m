@@ -19,7 +19,7 @@ function fig = dispClassMask_multiclass(pd_idx, classes)
     yticks([]);
     zticks([]);
     view(3)
-    daspect([1,1,1/5])
+    daspect([1,1,1/4])
     axis tight
     camlight
     camlight(-80,-10)
