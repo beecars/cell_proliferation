@@ -1,7 +1,7 @@
 function alignedPETvolume = maximizePETinMask(pt_vol, mask_vol, step)
-%MAXIMIZEPETINMASK Summary of this function goes here
-%   Detailed explanation goes here
-% set baseline
+%MAXIMIZEPETINMASK Performs an optimization to maximize the PET response in the
+% given mask. Basically a fine registration procedure.
+
 bl_pt_vol = pt_vol;
 bl = meanSUV_calculate(pt_vol, mask_vol);
 
@@ -11,7 +11,7 @@ if meanSUV_calculate(test_pt_vol, mask_vol) > bl
     dir = 1;
 else
     dir = -1;
-end 
+end
 dim1_adjust = 0;
 dim1_optimized = 0;
 bestSUV1 = bl;

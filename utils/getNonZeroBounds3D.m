@@ -1,9 +1,9 @@
 function bounds = getNonZeroBounds3D(data3d)
 %GETNONZEROBOUNDS3D Finds the bounds of a segmentation mask or segmented
-%data. To be used to remove "zero pading" from segmentations. 
-%   Input: 3d volume 
-%   Returns: [xlbound, xrbound; 
-%             ylbound, yrbound; 
+% data. To be used to remove "zero pading" from segmentations.
+%   Input: 3d volume
+%   Returns: [xlbound, xrbound;
+%             ylbound, yrbound;
 %             zlbound, zrbound]
 
 for slice = 1:size(data3d, 1)

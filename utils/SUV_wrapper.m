@@ -1,8 +1,8 @@
 function SUV_stats = SUV_wrapper(pd_idx, mask_name)
-%MEANSUV_WRAPPER a wrapper for calculating mean SUV from a
-%given object class name (string) and a pd_idx [patient_idx, day_idx]
-%associated with a "ct_pt_matfile" and a "mask_matfile" described
-%further below in this README.
+%SUV_WRAPPER a wrapper for calculating various SUV statistics from a
+% given object class name (string) and a pd_idx [patient_idx, day_idx]
+% associated with a "ct_pt_matfile" and a "mask_matfile" described
+% further below in this README.
 
 ct_pt_matfile = "patient" + pd_idx(1) + "_day" + pd_idx(2) + ".mat";
 mask_matfile = "patient" + pd_idx(1) + "_day" + pd_idx(2) + "_pred.mat";
