@@ -1,8 +1,7 @@
 function [vert_ticks, vert_labels] = getVertTickLabels(vertIdxs)
 %GETVERTTICKLABELS Used exclusively for making figures with nice vertebrae
-%labels. 
-%   Uses vertIdxs from the createVertStruct function to positionally
-%determine where to put each label on the axis of a chart. 
+% labels. Uses vertIdxs from the createVertStruct function to positionally
+% determine where to put each label on the axis of a chart.
 %
 % Input: vertIdxs (from createVertStruct)
 % Returns: vert_ticks - positional axis coordinates

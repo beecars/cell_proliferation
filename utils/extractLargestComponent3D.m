@@ -1,6 +1,6 @@
 function mask_volume = extractLargestComponent3D(mask_volume)
 %EXTRACTLARGESTCOMPONENT3D From an input volume mask, extracts the largest
-%connected component and returns it in the same sized volume as the input. 
+% connected component and returns it in the same sized volume as the input.
 
 cc = bwconncomp(mask_volume, 6);
 numVoxels = cellfun(@numel, cc.PixelIdxList);

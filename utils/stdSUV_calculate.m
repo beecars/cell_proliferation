@@ -1,7 +1,6 @@
 function stdSUV = stdSUV_calculate(pt_vol, mask_vol)
-%MEANSUV_EXTRACTION function used with "createVertStruct"
-%to produce total SUV content alongside the other struct fields 
-%for the individually segmented vertebrae. 
+%STDSUV_CALCULATE function used with "createVertStruct"
+% to produce std SUV statistic.
 
 % morphological processing
 s = strel([0 1 0; 1 1 1; 0 1 0]);

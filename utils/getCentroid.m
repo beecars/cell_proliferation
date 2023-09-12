@@ -1,7 +1,7 @@
 function centroid_idxs = getCentroid(mask_volume)
-%GETCENTROIDSLICEIDX Finds the approximate center slice by constructing a 
-%                    histogram of the number of mask pixels in successive 
-%                    slices and finding the mean.
+%GETCENTROIDSLICEIDX Finds the approximate center slice by constructing a
+% histogram of the number of mask pixels in successive slices and finding the
+% mean.
 
 % X dim
 n_slices = size(mask_volume, 1);

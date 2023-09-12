@@ -1,13 +1,14 @@
 function pt_scaled = scale_axialPET2CT(ct_pt_datafile)
 %{
-Function for interpolating (matching) PET scan data to undersampled CT scan
-slice locations. Uses MATLAB built-in "interp3" function.
+SCALE_AXIALPET2CT
+Function for interpolating (matching) PET scan data to
+undersampled CT scan slice locations. Uses MATLAB built-in "interp3" function.
 
-Requires a string input ("ct_pt_datafile") pointing to a .mat file 
+Requires a string input ("ct_pt_datafile") pointing to a .mat file
 with the following variables:
     ct - CT volume data
     pt - PT volume data
-    
+
 All the volume data should be oriented as:
     X (1st) axis - coronal plane direction.
     Y (2nd) axis - sagittal plane direction.

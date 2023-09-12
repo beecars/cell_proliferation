@@ -1,4 +1,4 @@
-function pct_gtr_14_arr = getSUV_byClass(pd_idx)
+function SUV_struct = getSUV_byClass(pd_idx)
 %GETTOTALSUV_BYCLASS extracts total SUV from associated mask and
 %FLT-PET data by downsampling the mask data in the axial plane to
 %match the FLT-PET data and aggregating the masked FLT-PET SUV values.
