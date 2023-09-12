@@ -20,7 +20,10 @@ mask_morph = imdilate(mask_down, s);
 
 % mask the PET data
 pt_masked = mask_morph .* pt;
-pt_masked = mask_morph .* maximizePETinMask(pt, mask_morph, 3);
+
+% I think I commented this out because the optimization was going haywire
+% for certain scans but I don't remember exactly.
+% pt_masked = mask_morph .* maximizePETinMask(pt, mask_morph, 3);
 
 % compute pct voxels gtr than 1.4 SUV uptake
 pt_gtr_14 = pt_masked > 1.4;
